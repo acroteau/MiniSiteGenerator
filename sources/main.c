@@ -2,6 +2,7 @@
 #include<string.h>
 #include<ctype.h>
 #include<stdlib.h>
+#include<strfunc.h>
 
 int helpCommand()
 {
@@ -12,19 +13,6 @@ int helpCommand()
     printf("help | h : Print this help text\n\n");
 
     return 0;
-}
-
-char* toLower(const char* stringInput)
-{
-    size_t inputLenght = strlen(stringInput);
-    char* lowerString = (char *) malloc(inputLenght);
-
-    for(int i=0; i<strlen(stringInput); i++)
-    {
-        lowerString[i] = tolower(stringInput[i]);
-    }
-
-    return lowerString;
 }
 
 int manageCommand(const char* command, int argumentCount, const char* arguments[])
