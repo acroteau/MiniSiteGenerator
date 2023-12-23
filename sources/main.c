@@ -3,6 +3,7 @@
 #include<ctype.h>
 #include<stdlib.h>
 #include<strfunc.h>
+#include<taggen.h>
 
 int helpCommand()
 {
@@ -21,6 +22,10 @@ int manageCommand(const char* command, int argumentCount, const char* arguments[
 
     if (strcmp("createsite", lowerCommand) == 0 || strcmp("cs", lowerCommand) == 0)
     {
+        char* classes[3] = {"test1", "test34", "test456"};
+        char* generatedTag = generateTag("h1", "un osti de titre", "titre_test", classes);
+        printf(generatedTag);
+        free(generatedTag);
         return 0;
     }
 

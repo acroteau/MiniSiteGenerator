@@ -1,1 +1,1 @@
-const char* generateTag(const char* tagName, const char* innerText, const char* id, const char* classes[]);
+char* generateTag(const char* tagName, const char* innerText, const char* id, char* classes[]);
